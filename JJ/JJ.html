@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>José José - El Príncipe de la Canción</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: black;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .pantalla {
+      display: none;
+      height: 100vh;
+      padding: 50px;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .pantalla.activa {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .pantalla1 {
+      background: linear-gradient(to right, #434343, #000000);
+    }
+
+    .pantalla2 {
+      background: linear-gradient(to right, #434343, #000000);
+    }
+
+    .pantalla3 {
+      background: linear-gradient(to right, #434343, #000000);
+    }
+
+    h1, h2 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      max-width: 600px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    .botonera {
+      position: fixed;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      z-index: 1000;
+    }
+
+    .botonera button {
+      padding: 10px 20px;
+      background-color: #FFD700;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .botonera button:hover {
+      background-color: #ffc107;
+    }
+    .imagen {
+      margin-top: 20px;
+      width: 300px;
+      max-width: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+      transition: transform 0.5s;
+    }
+
+    .imagen:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Pantalla 1 -->
+  <div class="pantalla pantalla1 activa" id="pantalla1">
+    <h1>José José</h1>
+    <h2>El Príncipe de la Canción</h2>
+    <p>
+      José Rómulo Sosa Ortiz, mejor conocido como José José, fue un cantante mexicano reconocido internacionalmente por su poderosa voz y emotiva interpretación. Nacido el 17 de febrero de 1948, se convirtió en uno de los artistas más icónicos de la música romántica en español durante más de cuatro décadas.
+    </p>
+    <img class="imagen" src="jose.jpg" alt="José José joven">
+  </div>
+
+  <!-- Pantalla 2 -->
+  <div class="pantalla pantalla2" id="pantalla2">
+    <h2>Discografía Destacada</h2>
+    <p>
+      Entre sus álbumes más exitosos destacan *Secretos* (1983), producido por Manuel Alejandro, que vendió millones de copias. Otros álbumes importantes son *El Triste* (1970), *Amor Amor* (1980), y *Reflexiones* (1984). Su estilo marcó una época y definió el bolero pop moderno.
+    </p>
+    <img class="imagen" src="jose3.jpg" alt="José José joven">
+  </div>
+
+  <!-- Pantalla 3 -->
+  <div class="pantalla pantalla3" id="pantalla3">
+    <h2>Legado y Reconocimientos</h2>
+    <p>
+      José José recibió múltiples premios a lo largo de su carrera, incluyendo nominaciones al Grammy y reconocimientos en toda América Latina. Su legado musical continúa influyendo a nuevas generaciones de artistas y su voz es considerada una de las más grandes de la música en español.
+    </p>
+    <img class="imagen" src="jose2.jpg" alt="José José joven">
+  </div>
+
+  <!-- Botones para cambiar de pantalla -->
+  <div class="botonera">
+    <button onclick="mostrarPantalla('pantalla1')">Biografía</button>
+    <button onclick="mostrarPantalla('pantalla2')">Discografía</button>
+    <button onclick="mostrarPantalla('pantalla3')">Legado</button>
+  </div>
+
+  <script>
+    function mostrarPantalla(id) {
+      const pantallas = document.querySelectorAll('.pantalla');
+      pantallas.forEach(p => p.classList.remove('activa'));
+      document.getElementById(id).classList.add('activa');
+    }
+  </script>
+
+</body>
+</html>
