@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Portada de Mareli</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #f0f4ff, #e0e7ff);
+            color: #333;
+            animation: fondoAnimado 10s infinite alternate;
+        }
+
+        /* Animación de fondo suave */
+        @keyframes fondoAnimado {
+            0% { background: linear-gradient(to bottom right, #f0f4ff, #e0e7ff); }
+            100% { background: linear-gradient(to bottom right, #dbeafe, #c7d2fe); }
+        }
+
+        .portada {
+            text-align: center;
+            padding: 80px 20px;
+            background-color: #4f46e5;
+            color: white;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .portada h1 {
+            font-size: 48px;
+            margin: 0;
+            animation: slideDown 1.2s ease-in-out;
+        }
+
+        .portada p {
+            font-size: 20px;
+            margin: 10px 0 0;
+            animation: fadeInText 2s ease-in;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 40px 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .boton-menu {
+            background-color: #6366f1;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: popIn 1s ease forwards;
+        }
+
+        .boton-menu:hover {
+            background-color: #4338ca;
+            transform: scale(1.08);
+        }
+
+        .contenido {
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #e0e7ff;
+            font-size: 14px;
+        }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInText {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideDown {
+            0% { transform: translateY(-50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes popIn {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="portada">
+        <h1>PÁGINA DE MARELI.</h1>
+        <p>Explora sus aplicaciones interactivas</p>
+    </div>
+
+    <div class="menu">
+        <a class="boton-menu" href="chatbot.html">Chatbot</a>
+        <a class="boton-menu" href="https://pzkin.github.io/Juegos1/">Juegos</a>
+        <a class="boton-menu" href="animacion.html">App Animación</a>
+        <a class="boton-menu" href="proyecto-final.html">Proyecto Final</a>
+    </div>
+
+    <div class="contenido">
+        <p>Haz clic en cualquier botón para comenzar.</p>
+    </div>
+
+    <footer>
+        &copy; 2025 Proyecto Escolar de Mareli. Todos los derechos reservados.
+    </footer>
+
+</body>
+</html>
